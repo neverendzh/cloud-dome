@@ -1,0 +1,13 @@
+server:
+  port: 80
+spring:
+  application:
+    name: api-conumer-order
+eureka:
+  client:
+    #    false 代表注册中心不注册自己
+    register-with-eureka: true
+    #    是否从注册中心抓取自己的注册信息，默认true，单点无所谓，集群必须设置为true，才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://erueka1.com:7001/eureka,http://erueka2.com:7002/eureka
