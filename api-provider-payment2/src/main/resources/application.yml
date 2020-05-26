@@ -22,6 +22,10 @@ eureka:
       instance:
         instance-id: api-payment-service-8002
         prefer-ip-address: true
+#        向服务端发送心跳链接的时间默认 30 秒
+        lease-renewal-interval-in-seconds: 30
+#        eureka服务端在收到最后一次心跳后等待时间上线 默认90秒，超时踢出服务
+        lease-expiration-duration-in-seconds: 90
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.neverend.springcloud.entity
