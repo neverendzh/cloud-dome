@@ -28,5 +28,5 @@ eureka:
         lease-expiration-duration-in-seconds: 90
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.neverend.springcloud.entity
+  type-aliases-package: com.neverend.commons.entity
 

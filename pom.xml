@@ -12,6 +12,8 @@
 		<module>api-eureka-server</module>
         <module>api-eureka-server2</module>
         <module>api-provider-payment2</module>
+		<module>api-provider-payment-zookeeper</module>
+        <module>api-conumer-order-zookeeper</module>
     </modules>
 
 
