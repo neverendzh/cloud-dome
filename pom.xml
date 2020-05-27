@@ -14,6 +14,8 @@
         <module>api-provider-payment2</module>
 		<module>api-provider-payment-zookeeper</module>
         <module>api-conumer-order-zookeeper</module>
+        <module>api-provider-payment-consul</module>
+        <module>api-conumer-order-consul</module>
     </modules>
 
 
