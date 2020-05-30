@@ -16,6 +16,7 @@
         <module>api-conumer-order-zookeeper</module>
         <module>api-provider-payment-consul</module>
         <module>api-conumer-order-consul</module>
+        <module>api-conumer-order-openfeign</module>
     </modules>
 
 

@@ -53,4 +53,14 @@ public class PaymentController {
         }
         return this.discoveryClient;
     }
+
+    @GetMapping("/timeout/test")
+    public CommonResult getByid() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            log.error("timout",e);
+        }
+        return new CommonResult(0,"sucess"+servePort,null);
+    }
 }

@@ -32,4 +32,13 @@ public class PaymentController {
         log.info("查询成功：" + payment);
         return new CommonResult(0, "sucess"+servePort, payment);
     }
+    @GetMapping("/timeout/test")
+    public CommonResult getByid() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            log.error("timout",e);
+        }
+        return new CommonResult(0,"sucess"+servePort,null);
+    }
 }
