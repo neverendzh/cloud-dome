@@ -20,18 +20,8 @@ public class OrderController {
     private PaymentService paymentService;
 
     @GetMapping("/consumer/api")
-    @HystrixCommand(fallbackMethod = "getApiHander", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")
-    })
     public CommonResult getApi() {
         return paymentService.apiTimeOUt();
-    }
-
-    public CommonResult getApiHander() {
-        CommonResult commonResult = new CommonResult();
-        commonResult.setCode(0);
-        commonResult.setMessage("消费者服务降级返回，😄😫");
-        return commonResult;
     }
 
     @HystrixCommand
@@ -41,21 +31,18 @@ public class OrderController {
         return paymentService.api();
     }
 
-    @HystrixCommand
     @GetMapping("/consumer/insert")
     public CommonResult<Payment> insert(Payment payment) {
         log.info("consumer-执行插入");
         return paymentService.insert(payment);
     }
 
-    @HystrixCommand
     @GetMapping("/consumer/getById/{id}")
     public CommonResult getByid(@PathVariable("id") Long id) {
         log.info("consumer-执行查询");
         return paymentService.getByid(id);
     }
 
-    @HystrixCommand
     @GetMapping("/timeout/test")
     public CommonResult getByid() {
         return paymentService.getByid();

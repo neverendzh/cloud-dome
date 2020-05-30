@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Component
-@FeignClient("API-PAYMENT-SERVICE-HYSTRIX")
+@FeignClient(value = "API-PAYMENT-SERVICE-HYSTRIX",fallback = PaymentServiceFallback.class)
 public interface PaymentService {
     @GetMapping("/api")
     CommonResult apiTimeOUt();
