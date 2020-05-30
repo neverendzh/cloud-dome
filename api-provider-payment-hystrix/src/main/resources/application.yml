@@ -1,0 +1,30 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: api-payment-service-hystrix
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/shop?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&serverTimezone=GMT%2B8&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: rootroot
+eureka:
+      client:
+        #    false 代表注册中心不注册自己
+        register-with-eureka: true
+        #    是否从注册中心抓取自己的注册信息，默认true，单点无所谓，集群必须设置为true，才能配合ribbon使用负载均衡
+        fetchRegistry: true
+        service-url:
+          defaultZone: http://erueka1.com:7001/eureka/,http://erueka2.com:7002/eureka/
+      instance:
+        instance-id: api-payment-service-hystrix-8003
+        prefer-ip-address: true
+#        向服务端发送心跳链接的时间默认 30 秒
+        lease-renewal-interval-in-seconds: 30
+#        eureka服务端在收到最后一次心跳后等待时间上线 默认90秒，超时踢出服务
+        lease-expiration-duration-in-seconds: 90
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.neverend.commons.entity
+

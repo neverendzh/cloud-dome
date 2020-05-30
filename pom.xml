@@ -17,6 +17,8 @@
         <module>api-provider-payment-consul</module>
         <module>api-conumer-order-consul</module>
         <module>api-conumer-order-openfeign</module>
+        <module>api-provider-payment-hystrix</module>
+        <module>api-conumer-order-openfeign-hystrix</module>
     </modules>
 
 
