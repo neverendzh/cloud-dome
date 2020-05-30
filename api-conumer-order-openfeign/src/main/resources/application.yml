@@ -14,3 +14,10 @@ eureka:
 ribbon:
   ReadTimeout: 5000 #建立链接超时时间
   ConnentTimeout: 5000 #建立链接后从服务器读取到可用资源超时时间
+logging:
+  level:
+    com:
+      neverend:
+        conumer:
+          orderopenfeign:
+            service: debug
