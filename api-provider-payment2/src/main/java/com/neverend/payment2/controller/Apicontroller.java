@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Apicontroller {
     @GetMapping("/api")
     public CommonResult getApi() {
+        log.info("api");
         CommonResult commonResult = new CommonResult();
         commonResult.CommonResultOK(0, "sucess");
         return commonResult;
