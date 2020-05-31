@@ -19,7 +19,6 @@
         <module>api-conumer-order-openfeign</module>
         <module>api-provider-payment-hystrix</module>
         <module>api-conumer-order-openfeign-hystrix</module>
-        <module>api-conmuer-order</module>
 		<module>api-conumer-order-hystrix-dashboard</module>
 		<module>api-getaway</module>
 	</modules>
@@ -29,6 +28,8 @@
 	<name>cloud-dome</name>
 	<!--    统计管理jar 版本-->
 	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.complier.target>1.8</maven.complier.target>
 		<junit.version>4.12</junit.version>
