@@ -19,7 +19,10 @@
         <module>api-conumer-order-openfeign</module>
         <module>api-provider-payment-hystrix</module>
         <module>api-conumer-order-openfeign-hystrix</module>
-    </modules>
+        <module>api-conmuer-order</module>
+		<module>api-conumer-order-hystrix-dashboard</module>
+		<module>api-getaway</module>
+	</modules>
 
 
 	<packaging>pom</packaging>
