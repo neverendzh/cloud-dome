@@ -1,5 +1,8 @@
 package com.neverend.payment.hystrix.controller;
 
+import cn.hutool.core.util.IdUtil;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.neverend.commons.entity.CommonResult;
 import com.neverend.commons.entity.Payment;
 import com.neverend.payment.hystrix.service.impl.PaymentServiceImpl;
@@ -41,4 +44,12 @@ public class PaymentController {
         }
         return new CommonResult(0,"sucess"+servePort,null);
     }
+//    服务熔断
+
+    @GetMapping("/payment/circuit/breaker/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id){
+       return paymentService.paymentCircuitBreaker(id);
+    }
+
+
 }
