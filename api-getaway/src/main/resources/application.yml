@@ -5,27 +5,30 @@ spring:
     name: api-cloud-gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由功能，和为服务名进行路由
       routes:
         - id: payment_routh1 #路由id，没有固定要求，但需要唯一，一般配合服务名称
-          uri: http://127.0.0.1:8001 #匹配服务IP地址
+#         uri: http://127.0.0.1:8001 #匹配服务IP地址
+          uri: lb://API-PAYMENT-SERVICE
           predicates:
             - Path=/getById/**
 
         - id: payment_routh2  #路由id，没有固定要求，但需要唯一，一般配合服务名称
-          uri: http://127.0.0.1:8001 #匹配服务IP地址
+#          uri: http://127.0.0.1:8001 #匹配服务IP地址
+          uri: lb://API-PAYMENT-SERVICE
           predicates:
             - Path=/payment/discovery
 
         - id: payment_routh3
-          uri: http://127.0.0.1:8001 #匹配服务IP地址
+#         uri: http://127.0.0.1:8001 #匹配服务IP地址
+          uri: lb://API-PAYMENT-SERVICE
           predicates:
             - Path=/api/**
-
-        - id: payment_routh4
-          uri: http://127.0.0.1:8002 #匹配服务IP地址
-          predicates:
-            - Path=/api/**
-
+            - After=2020-05-31T23:38:36.498+08:00[Asia/Shanghai] #在什么时间之后发访问路由
+            - Cookie=user,zhangsan #携带cookie访问
+            - Header=X-Request-id, \d+ #请求头要携带X-Request-id键，值是匹配正则的数字
 eureka:
   instance:
     hostname: api-cloud-gateway-service
