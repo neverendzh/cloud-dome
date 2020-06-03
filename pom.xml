@@ -21,6 +21,7 @@
         <module>api-conumer-order-openfeign-hystrix</module>
 		<module>api-conumer-order-hystrix-dashboard</module>
 		<module>api-getaway</module>
+		<module>api-config-center</module>
 	</modules>
 
 
