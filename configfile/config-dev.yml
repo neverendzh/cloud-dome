@@ -1,2 +1,2 @@
-server:
-  port: 124
+config:
+  info: master-config
