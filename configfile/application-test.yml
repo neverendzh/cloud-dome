@@ -1,0 +1,5 @@
+server:
+  port: 123
+spring:
+  application:
+    name: api-config-center
