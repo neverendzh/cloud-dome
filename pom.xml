@@ -22,6 +22,7 @@
 		<module>api-conumer-order-hystrix-dashboard</module>
 		<module>api-getaway</module>
 		<module>api-config-center</module>
+		<module>api-config-client</module>
 	</modules>
 
 

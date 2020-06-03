@@ -1,16 +1,14 @@
 server:
-  port: 3344
+  port: 3355
 spring:
   application:
-    name: api-config-center
+    name: api-config-client
   cloud:
     config:
-      server:
-        git:
-          uri: https://github.com/neverendzh/cloud-dome.git #githup 仓库地址
-          search-paths:
-            - configfile #目录
-      label: master #分支
+      label: master
+      name: config
+      profile: dev
+      uri: http://127.0.0.1:3344
 eureka:
   client:
     #    false 代表注册中心不注册自己
