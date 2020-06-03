@@ -1,5 +1,2 @@
-server:
-  port: 121
-spring:
-  application:
-    name: api-config-center
+config:
+  info: dev
