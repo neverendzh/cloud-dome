@@ -7,9 +7,9 @@ spring:
     config:
       server:
         git:
-          uri: git@git #githup 仓库地址
+          uri: https://github.com/neverendzh/cloud-dome.git #githup 仓库地址
           search-paths:
-            -springcloud-config #目录
+            -configfile #目录
       label: master #分支
 eureka:
   client:
