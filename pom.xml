@@ -23,7 +23,8 @@
 		<module>api-getaway</module>
 		<module>api-config-center</module>
 		<module>api-config-client</module>
-	</modules>
+        <module>api-config-client-bus</module>
+    </modules>
 
 
 	<packaging>pom</packaging>

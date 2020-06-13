@@ -11,6 +11,11 @@ spring:
           search-paths:
             - configfile #目录
       label: master #分支
+  rabbitmq:
+    host: *.*.*.*
+    port: 5672
+    username: neverendCloud
+    password: neverendCloud
 eureka:
   client:
     #    false 代表注册中心不注册自己
@@ -19,3 +24,8 @@ eureka:
     fetchRegistry: true
     service-url:
       defaultZone: http://erueka1.com:7001/eureka,http://erueka2.com:7002/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
