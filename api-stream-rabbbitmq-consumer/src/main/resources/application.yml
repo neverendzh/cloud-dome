@@ -1,0 +1,36 @@
+server:
+  port: 8802
+spring:
+  application:
+    name: api-cloud-stream-consumer
+  cloud:
+      stream:
+        binders: #在此处配置需要绑定的rabbitmq的服务消息
+          defaultRabbit: #表示定义的名称，用于绑定整合
+            type: rabbit #消息组件类型
+            environment:
+              spring:
+                rabbitmq:
+                  host: 47.94.239.43
+                  port: 5672
+                  username: neverendCloud
+                  password: neverendCloud
+        bindings:
+          input: #这个名字是一个通道名称
+            destination: studyExchange # 表示要使用的Exchang名字定义
+            content-type: application/json # 设置消息类型，为json类型
+            binder: defaultRabbit #设置需要绑定消息的具体设置
+            group: neverend1
+eureka:
+  client:
+    #    false 代表注册中心不注册自己
+    register-with-eureka: true
+    #    是否从注册中心抓取自己的注册信息，默认true，单点无所谓，集群必须设置为true，才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://erueka1.com:7001/eureka,http://erueka2.com:7002/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 2 #设置心跳时间间隔（默认30s）
+    lease-expiration-duration-in-seconds: 5 #如果现在超过了5s的间隔（默认90s）
+    instance-id: 127.0.0.1:8802 # 在徐岙溪列表是显示的主机名称
+    prefer-ip-address: true # 访问的路径变为ip地址

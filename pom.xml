@@ -24,6 +24,9 @@
 		<module>api-config-center</module>
 		<module>api-config-client</module>
         <module>api-config-client-bus</module>
+        <module>api-stream-rabbbitmq-provider</module>
+        <module>api-stream-rabbbitmq-consumer</module>
+        <module>api-stream-rabbbitmq-consumer2</module>
     </modules>
 
 
