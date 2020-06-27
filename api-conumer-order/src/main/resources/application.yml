@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: api-conumer-order
+  zipkin:
+    base-url: http://127.0.0.1:9411
+  sleuth:
+    sampler:
+      probability: 1 #采样率值0到1之间，1表示全部采集
 eureka:
   client:
     #    false 代表注册中心不注册自己

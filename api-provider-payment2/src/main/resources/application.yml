@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: api-payment-service
+  zipkin:
+    base-url: http://127.0.0.1:9411
+  sleuth:
+    sampler:
+      probability: 1 #采样率值0到1之间，1表示全部采集
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
