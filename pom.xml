@@ -27,7 +27,9 @@
         <module>api-stream-rabbbitmq-provider</module>
         <module>api-stream-rabbbitmq-consumer</module>
         <module>api-stream-rabbbitmq-consumer2</module>
-    </modules>
+		<module>api-cloud-nacos-provider</module>
+		<module>api-cloud-nacos-consumer</module>
+	</modules>
 
 
 	<packaging>pom</packaging>
