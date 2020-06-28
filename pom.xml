@@ -29,6 +29,7 @@
         <module>api-stream-rabbbitmq-consumer2</module>
 		<module>api-cloud-nacos-provider</module>
 		<module>api-cloud-nacos-consumer</module>
+		<module>api-cloud-nacos-config-client</module>
 	</modules>
 
 
