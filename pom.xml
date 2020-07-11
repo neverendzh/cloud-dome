@@ -30,7 +30,8 @@
 		<module>api-cloud-nacos-provider</module>
 		<module>api-cloud-nacos-consumer</module>
 		<module>api-cloud-nacos-config-client</module>
-	</modules>
+        <module>api-cloud-sentinel-service</module>
+    </modules>
 
 
 	<packaging>pom</packaging>
