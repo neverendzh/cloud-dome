@@ -34,6 +34,7 @@
         <module>api-consumer-nacos-order84</module>
 		<module>api-provider-payment9003</module>
 		<module>api-provider-payment9004</module>
+        <module>api-consumer-nacos-openfeign-order84</module>
     </modules>
 
 
