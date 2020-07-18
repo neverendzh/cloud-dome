@@ -6,8 +6,8 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:3333
-#         server-addr: 192.168.1.162:1111
+#        server-addr: 192.168.1.162:3333
+         server-addr: 192.168.1.162:1111
     sentinel:
       transport:
 #        默认8791端口，假如端口背占用从8791k开始依次+1扫描，直到未被占用的端口
