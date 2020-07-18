@@ -13,5 +13,12 @@ spring:
       transport:
         port: 8719
         dashboard: 127.0.0.1:8080
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 127.0.0.1:1111
+            dataId: consumer-nacos-order
+            data-type: json
+            rule-type: flow
 service-url:
   nacos-user-service: http://payment-nacos-provider
