@@ -31,6 +31,9 @@
 		<module>api-cloud-nacos-consumer</module>
 		<module>api-cloud-nacos-config-client</module>
         <module>api-cloud-sentinel-service</module>
+        <module>api-consumer-nacos-order84</module>
+		<module>api-provider-payment9003</module>
+		<module>api-provider-payment9004</module>
     </modules>
 
 
