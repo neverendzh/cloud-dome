@@ -35,7 +35,10 @@
 		<module>api-provider-payment9003</module>
 		<module>api-provider-payment9004</module>
         <module>api-consumer-nacos-openfeign-order84</module>
-    </modules>
+		<module>api-order-service</module>
+		<module>api-account-service</module>
+		<module>api-storage-service</module>
+	</modules>
 
 
 	<packaging>pom</packaging>
